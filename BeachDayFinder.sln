@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Prediction", "Services\BeachDayFinder.Prediction\BeachDayFinder.Prediction.csproj", "{1D135B20-405E-4045-BAF3-27198B226C5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Prediction.Api", "Services\BeachDayFinder.Prediction.Api\BeachDayFinder.Prediction.Api.csproj", "{1D135B20-405E-4045-BAF3-27198B226C5A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{5524DF48-99CF-4781-9663-6709876F0FF8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E949AB39-3B37-4BF9-8EA3-4A37F934FE59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Reporting", "Services\BeachDayFinder.Reporting\BeachDayFinder.Reporting.csproj", "{27C0B209-B664-442C-B607-293079CB6F6F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Reporting.Api", "Services\BeachDayFinder.Reporting.Api\BeachDayFinder.Reporting.Api.csproj", "{27C0B209-B664-442C-B607-293079CB6F6F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{52C0C003-209E-4E39-AF1E-541FEAB624BC}"
 EndProject
@@ -27,6 +27,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.BuildingBlocks.Persistence", "BuildingBlocks\Persistence\BeachDayFinder.BuildingBlocks.Persistence\BeachDayFinder.BuildingBlocks.Persistence.csproj", "{24C23ECE-097D-4347-8A59-481E6CFC1300}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.BuildingBlocks.Persistence.Mongo", "BuildingBlocks\Persistence\BeachDayFinder.BuildingBlocks.Persistence.Mongo\BeachDayFinder.BuildingBlocks.Persistence.Mongo.csproj", "{5CB9F9FA-FDEE-43EF-90CC-F6EBD7B05ED0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prediction", "Prediction", "{93B7BEA1-285B-45E9-A760-E2B53D1AB13A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reporting", "Reporting", "{67F23D9A-B79C-4FA7-97DE-E49CB833E47E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,8 +72,6 @@ Global
 		{5CB9F9FA-FDEE-43EF-90CC-F6EBD7B05ED0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{1D135B20-405E-4045-BAF3-27198B226C5A} = {E949AB39-3B37-4BF9-8EA3-4A37F934FE59}
-		{27C0B209-B664-442C-B607-293079CB6F6F} = {E949AB39-3B37-4BF9-8EA3-4A37F934FE59}
 		{52C0C003-209E-4E39-AF1E-541FEAB624BC} = {5524DF48-99CF-4781-9663-6709876F0FF8}
 		{EF0E9F83-DBC2-4F6D-984D-86A33E150596} = {5524DF48-99CF-4781-9663-6709876F0FF8}
 		{406A3F2B-E6D2-41AC-878D-DFB0B8DA5AF9} = {5524DF48-99CF-4781-9663-6709876F0FF8}
@@ -80,5 +82,9 @@ Global
 		{C9B1953B-F8E8-4D92-AEEA-C363540B691E} = {406A3F2B-E6D2-41AC-878D-DFB0B8DA5AF9}
 		{24C23ECE-097D-4347-8A59-481E6CFC1300} = {4D4F3D74-E0BC-406B-9263-3A1ADA079DEE}
 		{5CB9F9FA-FDEE-43EF-90CC-F6EBD7B05ED0} = {4D4F3D74-E0BC-406B-9263-3A1ADA079DEE}
+		{93B7BEA1-285B-45E9-A760-E2B53D1AB13A} = {E949AB39-3B37-4BF9-8EA3-4A37F934FE59}
+		{67F23D9A-B79C-4FA7-97DE-E49CB833E47E} = {E949AB39-3B37-4BF9-8EA3-4A37F934FE59}
+		{1D135B20-405E-4045-BAF3-27198B226C5A} = {93B7BEA1-285B-45E9-A760-E2B53D1AB13A}
+		{27C0B209-B664-442C-B607-293079CB6F6F} = {67F23D9A-B79C-4FA7-97DE-E49CB833E47E}
 	EndGlobalSection
 EndGlobal
