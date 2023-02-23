@@ -1,5 +1,6 @@
 using BeachDayFinder.BuildingBlocks.Api.Abstractions;
 using BeachDayFinder.BuildingBlocks.Messaging;
+using BeachDayFinder.Prediction.Api.Middlewares;
 using BeachDayFinder.Prediction.Application;
 
 const string EndpointName = "Prediction";
@@ -22,4 +23,5 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<ApiKeyVerificationMiddleware>();
 app.Run();

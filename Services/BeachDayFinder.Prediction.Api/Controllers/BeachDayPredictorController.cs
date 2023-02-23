@@ -22,9 +22,6 @@ public class BeachDayPredictorController : ApiController
         [FromHeader(Name = "x-api-key")] string apiKey,
         CancellationToken cancellationToken)
     {
-        if (apiKey is null)
-            return BadRequest($"{nameof(apiKey)} is missing");
-        
         var requestedLocation = new Location(new Coordinate(lat), new Coordinate(lon));
         
         var result = await Sender.Send(
