@@ -4,6 +4,23 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\..\BuildingBlocks\Application\BeachDayFinder.BuildingBlocks.Api.Abstractions\BeachDayFinder.BuildingBlocks.Api.Abstractions.csproj" />
+      <ProjectReference Include="..\BeachDayFinder.Reporting.Application\BeachDayFinder.Reporting.Application.csproj" />
+      <ProjectReference Include="..\BeachDayFinder.Reporting.Persistence\BeachDayFinder.Reporting.Persistence.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
+    </ItemGroup>
 
 </Project>

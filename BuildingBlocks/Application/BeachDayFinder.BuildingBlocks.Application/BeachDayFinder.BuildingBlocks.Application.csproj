@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Domain\BeachDayFinder.BuildingBlocks.Domain\BeachDayFinder.BuildingBlocks.Domain.csproj" />
       <ProjectReference Include="..\..\Persistence\BeachDayFinder.BuildingBlocks.Persistence\BeachDayFinder.BuildingBlocks.Persistence.csproj" />
     </ItemGroup>
 

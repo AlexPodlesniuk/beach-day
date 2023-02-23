@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\BuildingBlocks\Messaging\BeachDayFinder.BuildingBlocks.Messaging\BeachDayFinder.BuildingBlocks.Messaging.csproj" />
+    </ItemGroup>
+
 </Project>

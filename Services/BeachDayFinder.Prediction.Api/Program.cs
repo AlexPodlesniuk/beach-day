@@ -1,6 +1,25 @@
+using BeachDayFinder.BuildingBlocks.Api.Abstractions;
+using BeachDayFinder.BuildingBlocks.Messaging;
+using BeachDayFinder.Prediction.Application;
+
+const string EndpointName = "Prediction";
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.ConfigureAppSettings();
+builder.Host.UseMessaging(EndpointName);
+
+builder.Services.AddControllers();
+builder.Services.AddSwaggerGen();
+builder.Services.AddApplicationLayer(builder.Configuration);
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+app.MapControllers();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.Run();

@@ -1,0 +1,68 @@
+version: "3.9"
+networks:
+  my_network:
+    driver: bridge
+    
+services:
+  finder-mq:
+    image: rabbitmq:3-management-alpine
+    container_name: 'rabbitmq'
+    hostname: finder-mq
+    networks:
+      - my_network
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:15672" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    
+  mongodb:
+    image: mongo
+    networks:
+      - my_network
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+        
+  prediction-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    build:
+      context: .
+      dockerfile: ./Services/BeachDayFinder.Prediction.Api/Dockerfile
+    restart: on-failure
+    depends_on:
+      - mongodb
+      - finder-mq
+    networks:
+      - my_network
+    ports:
+      - "15100:80"
+
+  reporting-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    build:
+      context: .
+      dockerfile: ./Services/BeachDayFinder.Reporting.Api/Dockerfile
+    restart: on-failure
+    depends_on:
+      - mongodb
+      - finder-mq
+    networks:
+      - my_network
+    ports:
+      - "15101:80"
+
+volumes:
+  mongodb_data:

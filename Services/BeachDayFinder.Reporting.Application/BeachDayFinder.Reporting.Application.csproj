@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\BuildingBlocks\Application\BeachDayFinder.BuildingBlocks.Application\BeachDayFinder.BuildingBlocks.Application.csproj" />
+      <ProjectReference Include="..\BeachDayFinder.Prediction.Contracts\BeachDayFinder.Prediction.Contracts.csproj" />
+      <ProjectReference Include="..\BeachDayFinder.Reporting.Domain\BeachDayFinder.Reporting.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

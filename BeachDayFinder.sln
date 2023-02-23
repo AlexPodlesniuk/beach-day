@@ -38,13 +38,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Prediction.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Prediction.Contracts", "Services\BeachDayFinder.Prediction.Contracts\BeachDayFinder.Prediction.Contracts.csproj", "{8F5F9B7A-D77B-4938-8EBB-061C6D886283}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Prediction.Persistence", "Services\BeachDayFinder.Prediction.Persistence\BeachDayFinder.Prediction.Persistence.csproj", "{4CBD48B4-A2E3-4C81-9C6E-1F2BE80A50DF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Reporting.Application", "Services\BeachDayFinder.Reporting.Application\BeachDayFinder.Reporting.Application.csproj", "{0EF5E2CD-24ED-41B6-BFA2-57CCBEB6D01F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Reporting.Domain", "Services\BeachDayFinder.Reporting.Domain\BeachDayFinder.Reporting.Domain.csproj", "{B1E20020-87A9-49CB-A316-D2830EC3F19F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Reporting.Persistence", "Services\BeachDayFinder.Reporting.Persistence\BeachDayFinder.Reporting.Persistence.csproj", "{66E202C1-5363-448F-98D5-8E4DA93AD5D5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integrations", "Integrations", "{C1B9289D-690E-49DB-A5D7-318150B6581A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeachDayFinder.Prediction.Integrations.OpenWeatherMap", "Services\BeachDayFinder.Prediction.Integrations.OpenWeatherMap\BeachDayFinder.Prediction.Integrations.OpenWeatherMap.csproj", "{EFE9784C-7D65-4F4B-84F1-C3ADF0A2D8B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,10 +98,6 @@ Global
 		{8F5F9B7A-D77B-4938-8EBB-061C6D886283}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F5F9B7A-D77B-4938-8EBB-061C6D886283}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F5F9B7A-D77B-4938-8EBB-061C6D886283}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4CBD48B4-A2E3-4C81-9C6E-1F2BE80A50DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4CBD48B4-A2E3-4C81-9C6E-1F2BE80A50DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4CBD48B4-A2E3-4C81-9C6E-1F2BE80A50DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4CBD48B4-A2E3-4C81-9C6E-1F2BE80A50DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0EF5E2CD-24ED-41B6-BFA2-57CCBEB6D01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0EF5E2CD-24ED-41B6-BFA2-57CCBEB6D01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EF5E2CD-24ED-41B6-BFA2-57CCBEB6D01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -112,6 +110,10 @@ Global
 		{66E202C1-5363-448F-98D5-8E4DA93AD5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66E202C1-5363-448F-98D5-8E4DA93AD5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66E202C1-5363-448F-98D5-8E4DA93AD5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE9784C-7D65-4F4B-84F1-C3ADF0A2D8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE9784C-7D65-4F4B-84F1-C3ADF0A2D8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE9784C-7D65-4F4B-84F1-C3ADF0A2D8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE9784C-7D65-4F4B-84F1-C3ADF0A2D8B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{52C0C003-209E-4E39-AF1E-541FEAB624BC} = {5524DF48-99CF-4781-9663-6709876F0FF8}
@@ -131,9 +133,10 @@ Global
 		{4B39142D-A66A-444B-AE70-D9CC445378EF} = {93B7BEA1-285B-45E9-A760-E2B53D1AB13A}
 		{C2DA7715-D800-4EB3-B2C5-D86E76AC5400} = {93B7BEA1-285B-45E9-A760-E2B53D1AB13A}
 		{8F5F9B7A-D77B-4938-8EBB-061C6D886283} = {93B7BEA1-285B-45E9-A760-E2B53D1AB13A}
-		{4CBD48B4-A2E3-4C81-9C6E-1F2BE80A50DF} = {93B7BEA1-285B-45E9-A760-E2B53D1AB13A}
 		{0EF5E2CD-24ED-41B6-BFA2-57CCBEB6D01F} = {67F23D9A-B79C-4FA7-97DE-E49CB833E47E}
 		{B1E20020-87A9-49CB-A316-D2830EC3F19F} = {67F23D9A-B79C-4FA7-97DE-E49CB833E47E}
 		{66E202C1-5363-448F-98D5-8E4DA93AD5D5} = {67F23D9A-B79C-4FA7-97DE-E49CB833E47E}
+		{C1B9289D-690E-49DB-A5D7-318150B6581A} = {93B7BEA1-285B-45E9-A760-E2B53D1AB13A}
+		{EFE9784C-7D65-4F4B-84F1-C3ADF0A2D8B3} = {C1B9289D-690E-49DB-A5D7-318150B6581A}
 	EndGlobalSection
 EndGlobal
