@@ -15,6 +15,7 @@ public class ApiKeyVerificationMiddleware
         if (string.IsNullOrEmpty(apiKey))
         {
             context.Response.StatusCode = StatusCodes.Status400BadRequest;
+            context.Response.ContentType = "application/json";
             await context.Response.WriteAsJsonAsync($"{ApiKey} is missing");
             return;
         }
